@@ -67,7 +67,7 @@
       <file leaf-file-name="HashingTest4.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/HashingTest4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="94" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.4551282" vertical-offset="478" max-vertical-offset="1258">
+            <state line="49" column="37" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.893531" vertical-offset="0" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -201,7 +201,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HashingTest3">
+  <component name="RunManager" selected="JUnit.HashingTest4">
     <configuration default="false" name="HashingTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SimCompress" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -409,9 +409,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HashingTest3" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HashingTest4.testHash" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HashingTest4" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HashingTest4" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HashingTest3" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HashingTest4.testHash" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.HashingTest3.testHash" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.HashingTest2" />
       </list>
@@ -468,7 +468,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17518637" sideWeight="0.7133106" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23018147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26647565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -501,7 +501,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="98" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="833">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -561,14 +561,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="59" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.5692308" vertical-offset="236" max-vertical-offset="1207">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HashingTest4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="94" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.4551282" vertical-offset="478" max-vertical-offset="1258">
+        <state line="49" column="37" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.893531" vertical-offset="0" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>

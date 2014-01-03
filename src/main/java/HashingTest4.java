@@ -12,9 +12,11 @@ import java.util.zip.Adler32;
 
 public class HashingTest4
 {
+	public static final int BLOCK_SIZE = 10240;
 	private Multiset<Long> occ = HashMultiset.create();
 	private final static int NEW_LINE = 10;
 	private BufferedOutputStream blockContent;
+	private Adler32 checksum = new Adler32();
 
 	@Test
 	public void testHash() throws IOException
@@ -43,8 +45,6 @@ public class HashingTest4
 
 	private void checksumForFile( byte[] data ) throws IOException
 	{
-		Adler32 checksum = new Adler32();
-
 		boolean eof = false;
 		int p=0;
 		int length = data.length;
@@ -54,14 +54,14 @@ public class HashingTest4
 			checksum.reset();
 			int i = 0;
 			int b = data[p];
-			while( p<length && b != -1 && !( i > 10240 && b == NEW_LINE ) )
+			while( p<length && b != -1 && !( i > BLOCK_SIZE && b == NEW_LINE ) )
 			{
 				b = data[p];
 				i++;
 				p++;
 			}
-			checksum.update( data, p-i, i );
-			if( i < 10240 )
+			checksum.update( data, p - i, i );
+			if( i < BLOCK_SIZE )
 				eof = true;
 
 			long hash = checksum.getValue();
@@ -71,8 +71,6 @@ public class HashingTest4
 			}
 
 			occ.add( checksum.getValue() );
-
-
 		}
 	}
 }
