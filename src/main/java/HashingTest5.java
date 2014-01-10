@@ -9,12 +9,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.zip.Adler32;
 
-public class HashingTest4
+public class HashingTest5
 {
-	public static final int BLOCK_SIZE = 10240;
-	public static final int TAG_OPENING = 60;
+	public static final int MIN_BLOCK_SIZE = 1024;
+	public static final int MAX_BLOCK_SIZE = 10240;
 	private Multiset<Long> occ = HashMultiset.create();
-	private final static int NEW_LINE = 10;
 	private BufferedOutputStream blockContent;
 	private Adler32 checksum = new Adler32();
 
@@ -24,14 +23,18 @@ public class HashingTest4
 		File file = new File( "output.txt" );
 		blockContent = new BufferedOutputStream( new FileOutputStream( file ));
 
-		byte[] f1 = FileUtils.readFileToByteArray( new File( "D:/d3.html" ) );
-		byte[] f2 = FileUtils.readFileToByteArray( new File( "D:/d4.html" ) );
+		byte[] f1 = FileUtils.readFileToByteArray( new File( "D:/soapui.org.htm" ) );
+		byte[] f2 = FileUtils.readFileToByteArray( new File( "D:/soapui.org2.htm" ) );
+		byte[] f3 = FileUtils.readFileToByteArray( new File( "D:/atlassian.com.html" ) );
+		byte[] f4 = FileUtils.readFileToByteArray( new File( "D:/atlassian.com2.html" ) );
+		byte[] f5 = FileUtils.readFileToByteArray( new File( "D:/reddit.com.html" ) );
+		byte[] f6 = FileUtils.readFileToByteArray( new File( "D:/reddit.com2.html" ) );
 
 		long startTime = System.currentTimeMillis();
 		for( int i = 0; i < 1; i++ )
 		{
-			checksumForFile( f1 );
-			checksumForFile( f2 );
+			checksumForFile( f5 );
+			checksumForFile( f6 );
 		}
 		System.out.println( System.currentTimeMillis() - startTime );
 
@@ -53,8 +56,15 @@ public class HashingTest4
 			checksum.reset();
 			int i = 0;
 			int b = data[p];
-			while( p<length && !( i > BLOCK_SIZE && (b == NEW_LINE || b == TAG_OPENING ) ) )
+			while( p<length )
 			{
+				if( b=='<' && i > MIN_BLOCK_SIZE && (data[p+1] == 'h' || data[p+1] == 'H') )
+						break;
+				if( i > MAX_BLOCK_SIZE )
+				{
+					if( b=='<' && (data[p+1] == 'p' || data[p+1] == 'P') )
+						break;
+				}
 				b = data[p];
 				i++;
 				p++;
